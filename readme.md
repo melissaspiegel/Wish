@@ -124,6 +124,108 @@ print(linear_search(arr, 7))  # Output: 2
 📌 **Linear search runs in O(n) time, making it inefficient for large datasets compared to binary search.**
 
 ---
+Linear Search using `enumerate()`:
+```python
+def linear_search(arr, target):
+    for i, num in enumerate(arr):
+        if num == target:
+            return i
+    return -1
+```
+📌 **Using `enumerate()` simplifies the code and provides the index of the element directly.**
+
+---
+Linked List Implementation:
+```python
+class Node:
+    def __init__(self, data):
+        self.data = data
+        self.next = None
+
+class LinkedList:
+
+    def __init__(self):
+        self.head = None
+
+    def append(self, data):
+        new_node = Node(data)
+        if not self.head:
+            self.head = new_node
+            return
+        temp = self.head
+        while temp.next:
+            temp = temp.next
+        temp.next = new_node
+
+    def display(self):
+        temp = self.head
+        while temp:
+            print(temp.data, end=' ')
+            temp = temp.next
+
+ll = LinkedList()
+ll.append(10)
+ll.append(20)
+ll.display()  # Output: 10 20
+```
+📌 **Linked lists provide dynamic memory allocation but require O(n) traversal for access.**
+
+---
+Recursive Binary Search:
+```python
+def recursive_binary_search(arr, target, low, high):
+    if low > high:
+        return -1
+    mid = (low + high) // 2
+    if arr[mid] == target:
+        return mid
+    elif arr[mid] < target:
+        return recursive_binary_search(arr, target, mid + 1, high)
+    else:
+        return recursive_binary_search(arr, target, low, mid - 1)
+
+arr = [1, 3, 5, 7, 9, 11]
+print(recursive_binary_search(arr, 7, 0, len(arr) - 1))  # Output: 3
+```
+📌 **Recursive binary search simplifies the code but may lead to stack overflow for large datasets.**
+
+---
+Singly Linked List Implementation:
+```python
+class Node:
+    def __init__(self, data):
+        self.data = data
+        self.next = None
+
+class LinkedList:
+  
+    def __init__(self):
+        self.head = None
+
+    def append(self, data):
+        new_node = Node(data)
+        if not self.head:
+            self.head = new_node
+            return
+        temp = self.head
+        while temp.next:
+            temp = temp.next
+        temp.next = new_node
+
+    def display(self):
+        temp = self.head
+        while temp:
+            print(temp.data, end=' ')
+            temp = temp.next
+
+ll = LinkedList()
+ll.append(10)
+ll.append(20)
+ll.display()  # Output: 10 20
+```
+📌 **Singly linked lists provide dynamic memory allocation but require O(n) traversal for access.**
+
+---
 
 ## **6. Space Complexity Analysis (`space_complexity.py`)**
 ### **Example: Analyzing Memory Usage**
