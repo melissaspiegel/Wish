@@ -12,7 +12,7 @@ This repository contains Python implementations of various **data structures** a
 | `hacker.py`                 | Miscellaneous hacker-rank challenges |
 | `leap_year.py`              | Leap year validation logic |
 | `linear_search.py`          | Linear search implementation |
-| `linear_search_enumerate.py`| Optimized linear search using enumerate() |
+| `linear_search_enumerate.py`| Optimized linear search using enumerate() | 
 | `linked_list.py`            | Generic linked list implementation |
 | `recursive_binary_search.py`| Recursive binary search |
 | `singly_linked_list.py`     | Singly Linked List implementation |
